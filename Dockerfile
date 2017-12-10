@@ -6,3 +6,4 @@ RUN curl -s https://gitlab.com/mike-k/amd-app-sdk/raw/master/AMD-APP-SDKInstalle
 RUN tar -xjf AMD-APP-SDKInstaller.tar.bz2
 RUN ./AMD-APP-SDK-*.sh -- --acceptEULA 'yes' -s
 RUN rm AMD-APP-SDK-*.sh && rm -rf AMDAPPSDK-*
+RUN ln -sf /opt/AMDAPPSDK-3.0/lib/x86_64/sdk/libOpenCL.so.1 /opt/AMDAPPSDK-3.0/lib/x86_64/libOpenCL.so
